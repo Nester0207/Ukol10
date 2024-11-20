@@ -1,7 +1,14 @@
 let elmsButton = document.querySelectorAll("button")[0];
-let elmsCesko = document.querySelectorAll(".cesko")[0];
-let elmsUkrajina = document.querySelectorAll(".ukrajina")[0];
+let elmsZelva = document.querySelectorAll(".zelva")[0];
+let elmsKocka = document.querySelectorAll(".kocka")[0];
+
 elmsButton.addEventListener("click",() => {
-    elmsCesko.innerText = "Ukrajina";
-    elmsUkrajina.innerHTML = "Cesko";
+    let textKocka = elmsKocka.innerHTML;
+    let textZelva = elmsZelva.innerHTML;
+
+    elmsKocka.innerHTML = textZelva;
+    elmsZelva.innerHTML = textKocka;
+
+    console.log(textKocka,textZelva);
+
 })
